@@ -1,4 +1,4 @@
-@startuml uc2_2_add_calenda
+@startuml uc2_2_show_calenda
 :User: as actor
 boundary "Announcement view" as view
 boundary "show calendar view" as showCalendarView
