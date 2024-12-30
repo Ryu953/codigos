@@ -1,0 +1,11 @@
+@startuml uc4_publish_research_c
+
+rectangle ": User" as user
+rectangle ": publish new research view" as interface
+rectangle ": publish controller" as controller
+rectangle ": database" as database 
+
+user --r-> interface : > 1: getDatapublish() \n 5: showResult() <
+interface --r-> controller : > 2: getDatapublish()
+controller --r-> database : > 3: getDatapublish() \n 4: createNewpublish() >
+@enduml

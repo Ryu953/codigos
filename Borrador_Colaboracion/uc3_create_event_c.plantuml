@@ -1,0 +1,11 @@
+@startuml uc3_create_event_c
+rectangle ": User" as user
+rectangle "Create event view" as view
+rectangle "Create event control" as control
+rectangle ": database" as database
+
+user --r-> view : > 1: getDataEvent() \n 5: showResult() <
+view --r-> control : > 2: getDataEvent()
+control --r-> database : > 3: getDataEvent() \n 4: createNewEvent() >
+
+@enduml

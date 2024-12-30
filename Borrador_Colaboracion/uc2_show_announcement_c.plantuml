@@ -1,0 +1,12 @@
+@startuml uc2_show_announcement_c
+
+rectangle ": Actor" as actor
+rectangle ": Announcement view" as view
+rectangle ": Announcement control" as control
+rectangle ": database" as database
+
+actor --r-> view : > 1: searchAnnouncement(id) \n 4: showAnnouncement() <
+view --r-> control : > 2: searchAnnouncement(id)
+control --r-> database : > 3: searchAnnouncement(id)
+
+@enduml

@@ -1,0 +1,12 @@
+@startuml uc3_create_event
+:User: as actor
+boundary "Create event view" as view
+control "Create event control" as control
+entity database
+
+'connections
+
+actor --r-> view
+view --r-> control
+control --r-> database
+@enduml

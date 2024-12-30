@@ -1,0 +1,12 @@
+@startuml uc1_Login
+:User: as actor
+boundary "Login view" as interface
+control "login controller" as controller
+entity database
+
+'connections
+actor -r--> interface
+interface -r--> controller
+controller -r--> database
+
+@enduml

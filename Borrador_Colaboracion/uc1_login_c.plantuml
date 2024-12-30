@@ -1,0 +1,12 @@
+@startuml uc1_login_c
+
+rectangle ": User" as user 
+rectangle ": Login view" as view
+rectangle ": login controller" as controller
+rectangle ": Database" as database
+
+user --r-> view : > 1: submitClientData(id,password) \n 4: showResult() <
+view --r-> controller : > 2: submitClientData(id,password)
+controller --r-> database : > 3: searchClientData(id,password)
+
+@enduml

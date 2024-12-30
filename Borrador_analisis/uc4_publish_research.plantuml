@@ -1,0 +1,12 @@
+@startuml uc4_publish_research
+:User: as actor
+boundary "publish new research view" as interface
+control "publish controller" as controller
+entity database
+
+'connections
+actor -r--> interface
+interface -r--> controller
+controller -r--> database
+
+@enduml

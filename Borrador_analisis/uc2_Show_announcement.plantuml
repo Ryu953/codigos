@@ -1,0 +1,11 @@
+@startuml uc2_Show_announcement
+:Actor: as actor
+boundary "Announcement view" as view
+control "Announcement control" as control
+entity database
+
+'Connection
+actor -r--> view
+view -r--> control
+control -r--> database
+@enduml
